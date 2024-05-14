@@ -1,10 +1,17 @@
-import { DefaultTheme } from "styled-components"
+"use client"
+import { Roboto } from "next/font/google"
+import { createTheme } from "@mui/material/styles"
 
-const color = {
-  primary: "orange",
-  secondary: "green",
-}
+const roboto = Roboto({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+  display: "swap",
+})
 
-export type TColor = typeof color
+const theme = createTheme({
+  typography: {
+    fontFamily: roboto.style.fontFamily,
+  },
+})
 
-export const theme: DefaultTheme = { color }
+export default theme

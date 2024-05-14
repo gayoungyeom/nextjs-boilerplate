@@ -1,3 +1,4 @@
+import { Button as MUIButton } from "@mui/material"
 import React from "react"
 
 interface IButtonProps {
@@ -6,7 +7,11 @@ interface IButtonProps {
 }
 
 const Button = ({ text = "버튼", onClick }: IButtonProps) => {
-  return <button onClick={onClick}>{text}</button>
+  return (
+    <MUIButton variant="contained" onClick={onClick}>
+      {text}
+    </MUIButton>
+  )
 }
 
 export default Button

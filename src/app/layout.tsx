@@ -1,8 +1,6 @@
 import React from "react"
 import type { Metadata } from "next"
 import Providers from "./providers"
-import StyledComponentsRegistry from "@lib/registry"
-import "@styles/globals.css"
 
 export const metadata: Metadata = {
   title: "Next.js Boilerplate",
@@ -16,10 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </head>
+
       <body>
-        <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
-        </StyledComponentsRegistry>
+        <Providers>{children}</Providers>
       </body>
     </html>
   )

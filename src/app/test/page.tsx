@@ -17,7 +17,7 @@ const Test = () => {
       <ul>
         {data?.map((d) => (
           <li key={d.id} style={{ padding: "4px" }}>
-            {d.id}. {d.name}
+            {d.name}
           </li>
         ))}
       </ul>
